@@ -1,0 +1,12 @@
+2020-10-27 09:46:52.770 OperateInMeetingPageObject.py[142] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-10-27 10:00:37.075 ContactPageObject.py[12] call_from_favorite -> Find Control Timeout: {Name: 'RongliangVE210', ControlType: DataItemControl}
+2020-10-27 11:52:35.778 OperateInMeetingPageObject.py[141] hangup_call -> Find Control Timeout: {ClassName: 'QLabel', ControlType: TextControl}
+2020-10-27 12:08:30.398 OperateInMeetingPageObject.py[142] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-10-27 12:08:52.891 ContactPageObject.py[21] call_from_organization -> Find Control Timeout: {Name: '组织结构', ControlType: TabItemControl}
+2020-10-27 12:10:24.740 ContactPageObject.py[21] call_from_organization -> Find Control Timeout: {Name: '组织结构', ControlType: TabItemControl}
+2020-11-02 14:12:22.299 ContactPageObject.py[11] call_from_favorite -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-11-02 14:12:38.065 ContactPageObject.py[11] call_from_favorite -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-11-02 14:12:53.757 ContactPageObject.py[20] call_from_organization -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-11-02 14:13:07.297 HjtWindowsSingleton.py[29] close_hjt -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-11-02 14:13:28.062 ContactPageObject.py[20] call_from_organization -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-11-02 14:13:41.731 HjtWindowsSingleton.py[29] close_hjt -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}

@@ -1,0 +1,3 @@
+pytest~=6.1.1
+uiautomation~=2.0.7
+setuptools~=50.3.2

@@ -1,0 +1,29 @@
+2020-10-26 16:38:18.029 ReserveMeetingPageObject.py[46] use_random_number_as_meeting_room -> Find Control Timeout: {Name: '使用随机号码作为会议号码', ControlType: CheckBoxControl}
+2020-10-26 16:38:30.379 ReserveMeetingPageObject.py[49] allow_anonymous_user -> Find Control Timeout: {Name: '允许匿名入会', ControlType: CheckBoxControl}
+2020-10-26 16:38:42.792 ReserveMeetingPageObject.py[52] mute_when_join_meeting -> Find Control Timeout: {Name: '加入会议时静音', ControlType: CheckBoxControl}
+2020-10-26 16:38:55.147 ReserveMeetingPageObject.py[55] reserve_confirm -> Find Control Timeout: {Name: '预约', ControlType: ButtonControl}
+2020-10-26 16:46:43.080 ReserveMeetingPageObject.py[46] use_random_number_as_meeting_room -> Find Control Timeout: {Name: '使用随机号码作为会议号码', ControlType: CheckBoxControl}
+2020-10-26 16:46:55.478 ReserveMeetingPageObject.py[49] allow_anonymous_user -> Find Control Timeout: {Name: '允许匿名入会', ControlType: CheckBoxControl}
+2020-10-26 16:47:07.760 ReserveMeetingPageObject.py[52] mute_when_join_meeting -> Find Control Timeout: {Name: '加入会议时静音', ControlType: CheckBoxControl}
+2020-10-26 16:47:20.095 ReserveMeetingPageObject.py[55] reserve_confirm -> Find Control Timeout: {Name: '预约', ControlType: ButtonControl}
+2020-10-26 17:05:48.644 ReserveMeetingPageObject.py[50] use_random_number_as_meeting_room -> Find Control Timeout: {Name: '使用随机号码作为会议号码', ControlType: CheckBoxControl}
+2020-10-26 17:06:01.080 ReserveMeetingPageObject.py[53] allow_anonymous_user -> Find Control Timeout: {Name: '允许匿名入会', ControlType: CheckBoxControl}
+2020-10-26 17:06:13.413 ReserveMeetingPageObject.py[56] mute_when_join_meeting -> Find Control Timeout: {Name: '加入会议时静音', ControlType: CheckBoxControl}
+2020-10-26 17:07:11.737 ReserveMeetingPageObject.py[50] use_random_number_as_meeting_room -> Find Control Timeout: {Name: '使用随机号码作为会议号码', ControlType: CheckBoxControl}
+2020-10-26 17:07:24.141 ReserveMeetingPageObject.py[53] allow_anonymous_user -> Find Control Timeout: {Name: '允许匿名入会', ControlType: CheckBoxControl}
+2020-10-26 17:07:36.478 ReserveMeetingPageObject.py[56] mute_when_join_meeting -> Find Control Timeout: {Name: '加入会议时静音', ControlType: CheckBoxControl}
+2020-10-26 17:07:48.859 ReserveMeetingPageObject.py[59] reserve_confirm -> Find Control Timeout: {Name: '预约', ControlType: ButtonControl}
+2020-10-26 18:33:22.320 ReserveMeetingPageObject.py[87] control_now_meeting -> Find Control Timeout: {Name: '控制会议', ControlType: HyperlinkControl}
+2020-10-27 07:57:02.336 ReserveMeetingPageObject.py[87] control_now_meeting -> Find Control Timeout: {Name: '控制会议', ControlType: HyperlinkControl}
+2020-10-31 11:45:40.407 OperateInMeetingPageObject.py[158] hangup_call -> Can not move cursor. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-10-31 11:45:50.478 OperateInMeetingPageObject.py[159] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-10-31 11:46:21.696 HjtWindowsSingleton.py[31] close_hjt -> Find Control Timeout: {Name: '确定', ControlType: ButtonControl}
+2020-10-31 11:52:42.122 joinAMeetingPageObject.py[57] joinAMeetingFromPanelWithPassword -> Find Control Timeout: {AutomationId: 'CInputPasswordWidget.verticalWidget_2.m_pInputPasswordEdit', ControlType: EditControl}
+2020-10-31 11:53:02.521 HjtWindowsSingleton.py[29] close_hjt -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-10-31 12:03:08.828 OperateInMeetingPageObject.py[158] hangup_call -> Can not move cursor. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-10-31 12:03:18.906 OperateInMeetingPageObject.py[159] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-10-31 12:03:50.336 HjtWindowsSingleton.py[31] close_hjt -> Find Control Timeout: {Name: '确定', ControlType: ButtonControl}
+2020-10-31 12:16:10.069 OperateInMeetingPageObject.py[158] hangup_call -> Can not move cursor. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-10-31 12:16:20.149 OperateInMeetingPageObject.py[159] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-10-31 12:16:51.398 HjtWindowsSingleton.py[31] close_hjt -> Find Control Timeout: {Name: '确定', ControlType: ButtonControl}
+2020-10-31 12:19:49.549 ReserveMeetingPageObject.py[20] reserve_meeting_from_panel -> Find Control Timeout: {Name: '预约会议', ControlType: TextControl}

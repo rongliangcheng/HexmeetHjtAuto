@@ -1,0 +1,3 @@
+2020-10-31 13:51:17.532 LoginPageObject.py[18] fill_in_server_address -> Find Control Timeout: {AutomationId: 'CLoginDlg.m_pStackedWgtContent.CLoginInfoForm.verticalWidget.m_pEditServer', ControlType: EditControl}
+2020-10-31 13:52:15.923 LoginPageObject.py[18] fill_in_server_address -> Find Control Timeout: {AutomationId: 'CLoginDlg.m_pStackedWgtContent.CLoginInfoForm.verticalWidget.m_pEditServer', ControlType: EditControl}
+2020-10-31 14:26:10.712 LoginPageObject.py[19] fill_in_server_address -> Find Control Timeout: {AutomationId: 'CLoginDlg.m_pStackedWgtContent.CLoginInfoForm.verticalWidget.m_pEditServer', ControlType: EditControl}

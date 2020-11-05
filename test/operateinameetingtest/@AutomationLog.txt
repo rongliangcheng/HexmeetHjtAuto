@@ -1,0 +1,8 @@
+2020-10-26 16:17:08.342 OperateInMeetingPageObject.py[22] mute_umute_camera -> Can not move curosr. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-10-26 16:17:18.359 OperateInMeetingPageObject.py[23] mute_umute_camera -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnEnableCamera', ControlType: CheckBoxControl}
+2020-10-26 16:17:28.703 OperateInMeetingPageObject.py[32] share_content -> Can not move curosr. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-10-26 16:17:38.719 OperateInMeetingPageObject.py[33] share_content -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnShare', ControlType: ButtonControl}
+2020-10-26 16:17:49.022 OperateInMeetingPageObject.py[51] share_content_sound_highframerate -> Can not move curosr. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-10-27 14:47:41.405 OperateInMeetingPageObject.py[138] maximise_local_vidoe -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.widget.m_pBtnShowPic', ControlType: ButtonControl}
+2020-10-27 14:48:02.417 OperateInMeetingPageObject.py[144] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-10-27 14:48:22.763 joinAMeeting.py[24] clickJoinAMeetingFromPanel -> Find Control Timeout: {Name: '加入会议', ControlType: TextControl}

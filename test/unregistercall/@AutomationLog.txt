@@ -1,0 +1,17 @@
+2020-10-31 16:26:03.859 UnRegisterCallPageObject.py[35] change_microphone_setting -> Find Control Timeout: {Name: '关闭麦克风', ControlType: ComboBoxControl}
+2020-10-31 16:27:47.415 UnRegisterCallPageObject.py[35] change_microphone_setting -> Find Control Timeout: {Name: '关闭麦克风', ControlType: ComboBoxControl}
+2020-10-31 16:46:13.393 UnRegisterCallPageObject.py[37] change_microphone_setting -> Find Control Timeout: {Name: '关闭麦克风', ControlType: ComboBoxControl}
+2020-11-02 10:33:41.061 UnRegisterCallPageObject.py[21] fill_in_server_address -> Find Control Timeout: {AutomationId: 'CLoginDlg.m_pStackedWgtContent.CLoginJoinConfForm.verticalWidget.m_pEditServer', ControlType: EditControl}
+2020-11-02 10:35:07.165 OperateInMeetingPageObject.py[158] hangup_call -> Can not move cursor. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-11-02 10:35:17.247 OperateInMeetingPageObject.py[159] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-11-02 10:38:10.897 UnRegisterCallPageObject.py[21] fill_in_server_address -> Find Control Timeout: {AutomationId: 'CLoginDlg.m_pStackedWgtContent.CLoginJoinConfForm.verticalWidget.m_pEditServer', ControlType: EditControl}
+2020-11-02 10:43:34.327 ReserveMeetingPageObject.py[13] go_to_meeting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-11-02 10:43:44.693 UnRegisterCallPageObject.py[13] go_to_unregister_call_page -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.m_pWgtLoginUserInfo.horizontalWidget.m_pLblAvatar', ControlType: ImageControl}
+2020-11-02 10:46:19.559 ReserveMeetingPageObject.py[13] go_to_meeting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-11-02 10:49:05.519 ReserveMeetingPageObject.py[13] go_to_meeting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-11-02 10:52:51.376 ReserveMeetingPageObject.py[13] go_to_meeting_page -> Find Control Timeout: {ClassName: 'ev_app::custom_controls::CHomeMenuListView', ControlType: ListControl}
+2020-11-02 11:03:26.007 OperateInMeetingPageObject.py[159] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-11-02 11:03:36.656 UnRegisterCallPageObject.py[59] login_from_unregister_call_page -> Find Control Timeout: {Name: '返回', ControlType: ButtonControl}
+2020-11-02 11:03:47.144 UnRegisterCallPageObject.py[13] go_to_unregister_call_page -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.m_pWgtLoginUserInfo.horizontalWidget.m_pLblAvatar', ControlType: ImageControl}
+2020-11-02 11:29:40.009 UnRegisterCallPageObject.py[67] close_hjt -> Find Control Timeout: {AutomationId: 'CLoginDlg.m_pWgtTitlebar.m_pBtnClose', ControlType: ButtonControl}
+2020-11-05 12:28:23.444 OperateInMeetingPageObject.py[158] hangup_call -> Find Control Timeout: {ClassName: 'QLabel', ControlType: TextControl}
