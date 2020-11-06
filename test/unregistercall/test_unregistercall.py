@@ -22,6 +22,7 @@ show_name = "autotest"
 
 
 @allure.parent_suite("非注册入会")
+@allure.suite("非注册呼入会议")
 @allure.feature("测试HJT APP的未注册用户的入会操作")
 def setup_module():
     hjt_singleton.start_hjt()
