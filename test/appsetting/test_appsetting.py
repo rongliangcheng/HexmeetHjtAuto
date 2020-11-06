@@ -25,7 +25,7 @@ hjt_singleton = HjtWindowSingleton()
 bandwidth_list = ["384K", "512K", "768K", "1M", "1.5M", "3M", "4M", "2M"]
 
 
-@allure.feature("测试HJT APP的设置界面")
+
 def setup_module():
     hjt_singleton.start_hjt()
 
@@ -92,14 +92,18 @@ def __invite_others_and_join_the_meeting():
     sleep(10)
 
 
-@allure.parent_suite("应用设置")
+
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HJT APP的设置界面")
+@allure.parent_suite("应用设置")
 @allure.story("创建遍历带宽会议并入会")
 def test_prepare_all():
     __invite_others_and_join_the_meeting()
     operate_meeting.hangup_call()
 
 
+@allure.feature("测试HJT APP的设置界面")
+@allure.parent_suite("应用设置")
 @allure.story("改变带宽并入会")
 @pytest.mark.parametrize('bandwidth', bandwidth_list)
 def test_change_bandwidth(bandwidth):
@@ -111,6 +115,8 @@ def test_change_bandwidth(bandwidth):
 
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HJT APP的设置界面")
+@allure.parent_suite("应用设置")
 @allure.story("结束带宽遍历会议")
 def test_terminate_the_meeting():
     reserve_meeting.go_to_meeting_page()
@@ -118,6 +124,8 @@ def test_terminate_the_meeting():
 
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HJT APP的设置界面")
+@allure.parent_suite("应用设置")
 @allure.story("改变语言")
 def test_change_language():
     app_setting.chang_language("English")
@@ -126,12 +134,16 @@ def test_change_language():
 
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HJT APP的设置界面")
+@allure.parent_suite("应用设置")
 @allure.story("改变白板保持路径")
 def test_change_screen_shot_path():
     app_setting.change_snapshot_path()
 
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HJT APP的设置界面")
+@allure.parent_suite("应用设置")
 @allure.story("设置自动接听，并建会拉入")
 def test_change_auto_answer():
     app_setting.change_auto_answer()
@@ -140,6 +152,8 @@ def test_change_auto_answer():
 
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HJT APP的设置界面")
+@allure.parent_suite("应用设置")
 @allure.story("设置退出白板自动保存，并坚持文件")
 def test_auto_save_when_exit_whiteboard():
     __remove_screen_files()
@@ -150,6 +164,8 @@ def test_auto_save_when_exit_whiteboard():
 
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HJT APP的设置界面")
+@allure.parent_suite("应用设置")
 @allure.story("设置自动隐藏姓名")
 def test_auto_hide_participant_site_name():
     app_setting.change_auto_hide_site_name()
@@ -160,6 +176,8 @@ def test_auto_hide_participant_site_name():
 
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
+@allure.feature("测试HJT APP的设置界面")
+@allure.parent_suite("应用设置")
 @allure.story("设置入会后全屏模式")
 def test_change_to_full_mode_meeting():
     app_setting.change_to_full_mode_meeting()
