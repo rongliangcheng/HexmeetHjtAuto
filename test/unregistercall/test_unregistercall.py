@@ -21,7 +21,6 @@ conf_id_password = "12345"
 show_name = "autotest"
 
 
-
 def setup_module():
     hjt_singleton.start_hjt()
 
@@ -57,7 +56,8 @@ def __reserve_a_now_conference(password=""):
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.suite("非注册呼入会议")
+@allure.parent_suite("非注册入会")
+# @allure.suite("非注册呼入会议")
 @allure.feature("测试HJT APP的未注册用户的入会操作")
 @allure.story("匿名入会")
 def test_normal_call():
@@ -71,7 +71,7 @@ def test_normal_call():
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.suite("非注册呼入会议")
+@allure.parent_suite("非注册呼入会议")
 @allure.feature("测试HJT APP的未注册用户的入会操作")
 @allure.story("创建带密码即时会议")
 def test_reserve_a_now_password_conference():
@@ -80,7 +80,7 @@ def test_reserve_a_now_password_conference():
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.suite("非注册呼入会议")
+@allure.parent_suite("非注册呼入会议")
 @allure.feature("测试HJT APP的未注册用户的入会操作")
 @allure.story("匿名入会并输入密码")
 def test_unregister_call_password():
@@ -94,7 +94,7 @@ def test_unregister_call_password():
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.suite("非注册呼入会议")
+@allure.parent_suite("非注册呼入会议")
 @allure.feature("测试HJT APP的未注册用户的入会操作")
 @allure.story("匿名并同时输入会议号和密码")
 def test_unregister_call_id_password_one_line():
@@ -107,7 +107,7 @@ def test_unregister_call_id_password_one_line():
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.suite("非注册呼入会议")
+@allure.parent_suite("非注册呼入会议")
 @allure.feature("测试HJT APP的未注册用户的入会操作")
 @allure.story("清除会议")
 def test_terminate_reserve_call():
