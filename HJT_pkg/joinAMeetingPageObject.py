@@ -61,7 +61,9 @@ class JoinAMeeting:
         self.hexMeetHJTWindow.WindowControl(searchDepth=1, ClassName="ev_app::views::CJoinConfDlg").TextControl(searchDepth=2, Name="加入会议").Click()
         # 通过移动鼠标到会议号码后面并添加密码
         x, y = auto.GetCursorPos()
-        auto.Click(x+50, y+50)
+        # auto.Click(x+50, y+50)
+        # hig DPI
+        auto.Click(x + 40, y + 40)
         auto.SendKeys("*"+password+"{ENTER}")
 
     def is_in_meeting(self):

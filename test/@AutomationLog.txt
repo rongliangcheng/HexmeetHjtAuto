@@ -232,3 +232,15 @@
 2020-11-05 09:56:34.762 HjtWindowsSingleton.py[31] close_hjt -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
 2020-11-05 09:56:52.211 UnRegisterCallPageObject.py[71] login_from_unregister_call_page -> Find Control Timeout: {Name: '登录', ControlType: ButtonControl}
 2020-11-05 09:57:05.601 HjtWindowsSingleton.py[31] close_hjt -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-11-09 13:07:32.177 OperateInMeetingPageObject.py[161] hangup_call -> Find Control Timeout: {Name: '离开会议', ControlType: ButtonControl}
+2020-11-09 13:07:48.344 ContactPageObject.py[11] call_from_favorite -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-11-09 13:08:04.221 ContactPageObject.py[20] call_from_organization -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
+2020-11-09 13:10:10.205 HjtWindowsSingleton.py[31] close_hjt -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-11-09 13:15:05.684 OperateInMeetingPageObject.py[161] hangup_call -> Find Control Timeout: {Name: '离开会议', ControlType: ButtonControl}
+2020-11-09 14:24:28.282 UnRegisterCallPageObject.py[49] fill_in_password -> Find Control Timeout: {AutomationId: 'CInputPasswordWidget.verticalWidget_2.m_pInputPasswordEdit', ControlType: EditControl}
+2020-11-09 14:35:21.176 OperateInMeetingPageObject.py[158] hangup_call -> Can not move cursor. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-11-09 14:35:31.189 OperateInMeetingPageObject.py[159] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-11-09 14:56:40.533 ReserveMeetingPageObject.py[32] choose_now -> Find Control Timeout: {Name: '现在', ControlType: CheckBoxControl}
+2020-11-09 15:09:46.526 ReserveMeetingPageObject.py[22] reserve_meeting_from_panel -> Find Control Timeout: {Name: '预约会议', ControlType: TextControl}
+2020-11-09 15:10:02.428 ReserveMeetingPageObject.py[22] reserve_meeting_from_panel -> Find Control Timeout: {Name: '预约会议', ControlType: TextControl}
+2020-11-09 15:10:17.868 ReserveMeetingPageObject.py[22] reserve_meeting_from_panel -> Find Control Timeout: {Name: '预约会议', ControlType: TextControl}

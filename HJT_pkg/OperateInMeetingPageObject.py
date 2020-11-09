@@ -158,7 +158,7 @@ class OperateInMeeting:
         self.meetingLabel.Click()
         self.meetingControlToolBar.ButtonControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup").Click()
         time.sleep(2)
-        auto.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=2, Name="离开会议").Click()
+        auto.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.AlertDlg.m_bottomWidget.m_button1").Click()
 
     def terminate_call(self):
         """结束会议"""
@@ -174,7 +174,9 @@ class OperateInMeeting:
         # auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutBackgroundDlg").WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutCoverDlg")\
         #     .WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutToolbarDlg").WindowControl(searchDepth=3, ClassName="ev_app::views::CLayoutCellCoverDlg").Click()
         x, y = auto.GetCursorPos()
-        auto.Click(x+800, y-300)
+        # Normal PC auto.Click(x+800, y-300)
+        # High DPI
+        auto.Click(x + 800, y - 300)
         self.meetingControlToolBar.ButtonControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup").Click()
         time.sleep(2)
         auto.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=2, Name="结束会议").Click()

@@ -15,7 +15,7 @@ import sys
 
 login_user = "hjtautotest5"
 remote_user = "RongliangVE210"
-screenshot_dir = "E:\\Autotest\\"
+screenshot_dir = "H:\\Autotest\\"
 reserve_meeting = ReserveMeeting()
 operate_meeting = OperateInMeeting()
 join_meeting = JoinAMeeting()

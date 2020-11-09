@@ -25,7 +25,9 @@ class UnRegisterCall:
         """暂时改变不了值"""
         self.login_windows.TextControl(searchDepth=2, Name="加入会议").Click()
         x, y = auto.GetCursorPos()
-        auto.Click(x + 55, y + 95)
+        # Normal PC auto.Click(x + 55, y + 95)
+        # Hihg DPI
+        auto.Click(x + 45, y + 75)
         auto.SendKeys("{BACK}" * 40)
         auto.SendKeys(conference_id)
         # conference_id_edit = self.login_page.ComboBoxControl(searchDepth=3, AutomationId="CLoginDlg.m_pStackedWgtContent.CLoginJoinConfForm.verticalWidget.m_pCmbBoxConfNumber")
@@ -35,7 +37,9 @@ class UnRegisterCall:
     def append_password(self, password):
         self.login_windows.TextControl(searchDepth=2, Name="加入会议").Click()
         x, y = auto.GetCursorPos()
-        auto.Click(x + 55, y + 95)
+        # Normal PC auto.Click(x + 55, y + 95)
+        # Hihg DPI
+        auto.Click(x + 45, y + 75)
         auto.SendKeys(password)
 
     def fill_in_display_name(self, display_name):

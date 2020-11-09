@@ -13,7 +13,9 @@ class ReserveMeeting:
         self.hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtOperationBar").ListControl(
             searchDepth=2, ClassName="ev_app::custom_controls::CHomeMenuListView").Click()
         x, y = auto.GetCursorPos()
-        auto.Click(x, y - 70)
+        # auto.Click(x, y - 70)
+        # high DPI
+        auto.Click(x, y - 55)
 
     def reserve_meeting_from_panel(self):
         self.go_to_meeting_page()
