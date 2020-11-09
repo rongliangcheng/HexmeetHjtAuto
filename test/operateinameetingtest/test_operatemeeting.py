@@ -24,6 +24,7 @@ def teardown_module():
 @allure.story("从菜单栏呼叫")
 @allure.step("入会")
 def test_joinameetingfromtopmenu():
+    sleep(3)
     join_meeting_po.join_a_meeting_from_top_menu()
     assert join_meeting_po.is_in_meeting()
 

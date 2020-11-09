@@ -29,6 +29,7 @@ def __user_login(server_addr, account, password):
 @allure.feature("测试HJT APP的登录界面的操作")
 @allure.story("回到登录界面")
 def test_go_to_login_page():
+    sleep(3)
     user_login.go_to_login_page()
 
 

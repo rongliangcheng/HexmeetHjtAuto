@@ -60,6 +60,7 @@ def __reserve_a_now_conference(password=""):
 @allure.feature("测试HJT APP的未注册用户的入会操作")
 @allure.story("匿名入会")
 def test_normal_call():
+    sleep(3)
     unregister_call.go_to_unregister_call_page()
     sleep(1)
     __make_a_call(server_addr, conf_id, show_name)
