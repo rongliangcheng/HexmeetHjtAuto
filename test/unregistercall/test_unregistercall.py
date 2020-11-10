@@ -7,6 +7,7 @@ from HJT_pkg.UnRegisterCallPageObject import UnRegisterCall
 from HJT_pkg.HjtWindowsSingleton import HjtWindowSingleton
 from HJT_pkg.ReserveMeetingPageObject import ReserveMeeting
 from HJT_pkg.OperateInMeetingPageObject import OperateInMeeting
+from HJT_pkg.Screen import CaptureScreen
 from time import sleep
 
 
@@ -19,6 +20,7 @@ server_addr = "cloudbeta.hexmeet.com"
 conf_id = "13910001001"
 conf_id_password = "12345"
 show_name = "autotest"
+capture_screen = CaptureScreen()
 
 
 def setup_module():
@@ -98,10 +100,13 @@ def test_unregister_call_password():
 @allure.feature("测试HJT APP的未注册用户的入会操作")
 @allure.story("匿名并同时输入会议号和密码")
 def test_unregister_call_id_password_one_line():
+    pic_name = "anonymous_confid_password.png"
     sleep(1)
     unregister_call.append_password("*" + password)
     sleep(1)
     unregister_call.user_join_commit()
+    capture_screen.capture_screen(pic_name)
+    capture_screen.attach_pic(pic_name, "anonymous call with password")
     sleep(30)
     operate_meeting.hangup_call()
 
