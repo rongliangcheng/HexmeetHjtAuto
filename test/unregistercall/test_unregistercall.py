@@ -105,9 +105,10 @@ def test_unregister_call_id_password_one_line():
     unregister_call.append_password("*" + password)
     sleep(1)
     unregister_call.user_join_commit()
+    sleep(15)
     capture_screen.capture_screen(pic_name)
     capture_screen.attach_pic(pic_name, "anonymous call with password")
-    sleep(30)
+    sleep(15)
     operate_meeting.hangup_call()
 
 
