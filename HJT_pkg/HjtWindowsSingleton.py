@@ -1,6 +1,8 @@
 import time
 import subprocess
 import os
+import win32gui
+import win32con
 import uiautomation as auto
 from time import sleep
 
@@ -27,6 +29,8 @@ class HjtWindowSingleton:
     def close_hjt():
         """关闭程序"""
         hexMeetHJTWindow = auto.WindowControl(searchDepth=1, ClassName='ev_app::views::CHomeDlg')
+        if hexMeetHJTWindow.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=3, Name="确定").Exists(1):
+            hexMeetHJTWindow.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=3, Name="确定").Click()
         sleep(3)
         hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar").ButtonControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar.m_pBtnClose").Click()
         sleep(3)
@@ -41,3 +45,11 @@ class HjtWindowSingleton:
         """重启应用"""
         if not auto.WindowControl(searchDepth=1, ClassName='ev_app::views::CHomeDlg').Exists():
             subprocess.Popen("C:\\Program Files (x86)\\HexMeetHJT\\HexMeetHJT.exe")
+
+    @staticmethod
+    def minimize_windows():
+        """最小化所有应用"""
+        hWndList = []
+        win32gui.EnumWindows(lambda hWnd, param: param.append(hWnd), hWndList)
+        for hwnd in hWndList:
+            win32gui.ShowWindow(hwnd, win32con.SW_MINIMIZE)

@@ -99,6 +99,7 @@ def __invite_others_and_join_the_meeting():
 @allure.story("创建遍历带宽会议并入会")
 def test_prepare_all():
     sleep(3)
+    HjtWindowSingleton.minimize_windows()
     __invite_others_and_join_the_meeting()
     operate_meeting.hangup_call()
 
