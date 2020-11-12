@@ -7,3 +7,5 @@ from HJT_pkg.OperateInMeetingPageObject import OperateInMeeting
 from HJT_pkg.ReserveMeetingPageObject import ReserveMeeting
 from HJT_pkg.UnRegisterCallPageObject import UnRegisterCall
 from HJT_pkg.Screen import CaptureScreen
+from HJT_pkg.AppVersion import AppVersion
+from HJT_pkg.BuildVersion import BuildVersion
