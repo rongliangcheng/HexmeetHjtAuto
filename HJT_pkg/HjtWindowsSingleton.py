@@ -48,8 +48,14 @@ class HjtWindowSingleton:
 
     @staticmethod
     def minimize_windows():
-        """最小化所有应用"""
-        hWndList = []
-        win32gui.EnumWindows(lambda hWnd, param: param.append(hWnd), hWndList)
-        for hwnd in hWndList:
-            win32gui.ShowWindow(hwnd, win32con.SW_MINIMIZE)
+        """最小化所有应用,"""
+        """不好用"""
+        foreground_window = win32gui.GetForegroundWindow()
+        while foreground_window != None:
+            print(win32gui.GetWindowText(foreground_window))
+            win32gui.ShowWindow(foreground_window, win32con.SW_MINIMIZE)
+            foreground_window = win32gui.GetForegroundWindow()
+
+
+if __name__ == '__main__':
+    HjtWindowSingleton.minimize_windows()
