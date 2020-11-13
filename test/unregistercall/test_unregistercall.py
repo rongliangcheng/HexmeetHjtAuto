@@ -78,6 +78,9 @@ def test_normal_call():
 @allure.story("创建带密码即时会议")
 def test_reserve_a_now_password_conference():
     unregister_call.login_from_unregister_call_page()
+    sleep(3)
+    reserve_meeting.clear_reserved_meeting()
+    sleep(4)
     __reserve_a_now_conference(password)
 
 

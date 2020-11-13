@@ -7,7 +7,8 @@ class ReserveMeeting:
 
     def __init__(self):
         self.hexMeetHJTWindow = HjtWindowSingleton().getHJTWindow()
-        self.reserve_meeting_page = self.hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext")
+        self.reserve_meeting_page = self.hexMeetHJTWindow.GroupControl(searchDepth=1,
+                                                                       AutomationId="CHomeDlg.m_pWgtContext")
 
     def go_to_meeting_page(self):
         self.hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtOperationBar").ListControl(
@@ -19,8 +20,8 @@ class ReserveMeeting:
 
     def reserve_meeting_from_panel(self):
         self.go_to_meeting_page()
-        self.hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").TextControl(searchDepth=9, Name="预约会议").Click()
-
+        self.hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").TextControl(
+            searchDepth=9, Name="预约会议").Click()
 
     def choose_date(self):
         self.reserve_meeting_page.EditControl(searchDepth=10, Name="请选择开始日期").Click()
@@ -47,7 +48,8 @@ class ReserveMeeting:
         participants_page.TabItemControl(searchDepth=5, Name="组织结构").Click()
         participants_page.EditControl(searchDepth=4, Name="请选择").Click()
         sleep(1)
-        self.hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").TextControl(searchDepth=10, Name="全部类型").Click()
+        self.hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtContext").TextControl(
+            searchDepth=10, Name="全部类型").Click()
         sleep(1)
         participants_page.EditControl(searchDepth=3, Name="输入用户/终端名称").SendKeys(name)
         sleep(1)
@@ -90,11 +92,11 @@ class ReserveMeeting:
     def join_now_meeting(self):
         self.reserve_meeting_page.HyperlinkControl(searchDepth=9, Name="加入会议").Click()
         sleep(1)
-        self.hexMeetHJTWindow.WindowControl(searchDepth=1, ClassName="ev_app::views::CJoinConfDlg").ButtonControl(searchInterval=4, Name="加入").Click()
+        self.hexMeetHJTWindow.WindowControl(searchDepth=1, ClassName="ev_app::views::CJoinConfDlg").ButtonControl(
+            searchInterval=4, Name="加入").Click()
 
     def control_now_meeting(self):
         self.reserve_meeting_page.HyperlinkControl(searchDepth=9, Name="控制会议").Click()
-
 
     def invite_others_control_now_meeting(self, name):
         sleep(1)
@@ -110,3 +112,10 @@ class ReserveMeeting:
         self.reserve_meeting_page.HyperlinkControl(searchDepth=9, Name="结束").Click()
         sleep(1)
         self.reserve_meeting_page.ButtonControl(searchDepth=8, Name="确定").Click()
+
+    def clear_reserved_meeting(self):
+        while self.reserve_meeting_page.HyperlinkControl(searchDepth=9, Name="结束").Exists(1):
+            self.reserve_meeting_page.HyperlinkControl(searchDepth=9, Name="结束").Click()
+            sleep(1)
+            self.reserve_meeting_page.ButtonControl(searchDepth=8, Name="确定").Click()
+            sleep(3)

@@ -30,7 +30,9 @@ def teardown_module():
 @allure.story("预约会议")
 @allure.step("点击入会")
 def test_click_reserve_meeting():
-    sleep(2)
+    sleep(3)
+    reserve_meeting.clear_reserved_meeting()
+    sleep(4)
     reserve_meeting.reserve_meeting_from_panel()
 
 

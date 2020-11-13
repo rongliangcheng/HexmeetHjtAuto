@@ -1,23 +1,30 @@
 from time import sleep
+import urllib
+from http import cookiejar as cookielib
+
 import requests
 
 
 class BuildVersion:
     def __init__(self):
         self.buildUrl = "http://172.27.0.12:8080/view/HJT%20SVC%20EVSDK%20APP/job/swep-evsdk-win-svc-qt-1.4.0/"
-        self.loginUrl = "http://172.27.0.12:8080/login?from=%2Fview%2FHJT%2520SVC%2520EVSDK%2520APP%2Fjob%2Fswep-evsdk-win-svc-qt-1.4.0%2F"
         self.session = requests.session()
+        self.session.cookies = cookielib.LWPCookieJar(filename="huihuCookies.txt")
 
-        data = [
-            ('opr', 'pwdLogin'),
-            ('userName', 'chengrl'),
-            ('pwd', '123456'),
-            ('rememberPwd', '0'),
-        ]
+    def login(self):
+        loginUrl = "http://172.27.0.12:8080/login?from=%2Fview%2FHJT%2520SVC%2520EVSDK%2520APP%2Fjob%2Fswep-evsdk-win-svc-qt-1.4.0%2F"
+        userAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36"
+        header = {
+            "Referer": loginUrl,
+            'User-Agent': userAgent,
+        }
+        post_data = {
+            "username": "chengrl",
+            "password": "123456",
+        }
 
-        sleep(5)
-        res = self.session.post(self.loginUrl, data)
-        print(res)
+        res = self.session.post(loginUrl, data=post_data, headers=header)
+        print(res.text)
 
     def getBuildVersion(self):
         try:
@@ -29,4 +36,5 @@ class BuildVersion:
 
 
 if __name__ == '__main__':
+    BuildVersion().login()
     BuildVersion().getBuildVersion()
