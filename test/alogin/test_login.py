@@ -1,5 +1,8 @@
 import pytest
 import allure
+import sys
+import os
+sys.path.append((os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))))
 from HJT_pkg.LoginPageObject import UserLogin
 from HJT_pkg.HjtWindowsSingleton import HjtWindowSingleton
 from time import sleep
