@@ -28,15 +28,21 @@ class HjtWindowSingleton:
     @staticmethod
     def close_hjt():
         """关闭程序"""
-        hexMeetHJTWindow = auto.WindowControl(searchDepth=1, ClassName='ev_app::views::CHomeDlg')
-        if hexMeetHJTWindow.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=3, Name="确定").Exists(1):
-            hexMeetHJTWindow.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=3, Name="确定").Click()
-        sleep(3)
-        hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar").ButtonControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar.m_pBtnClose").Click()
-        sleep(3)
-        hexMeetHJTWindow.WindowControl(searchDepth=1, AutomationId="CHomeDlg.AlertDlg").ButtonControl(searchDepth=3, Name="确定").Click()
-        sleep(3)
-        if hexMeetHJTWindow.Exists():
+        try:
+            hexMeetHJTWindow = auto.WindowControl(searchDepth=1, ClassName='ev_app::views::CHomeDlg')
+            if hexMeetHJTWindow.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(
+                    searchDepth=3, Name="确定").Exists(1):
+                hexMeetHJTWindow.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(
+                    searchDepth=3, Name="确定").Click()
+            sleep(3)
+            hexMeetHJTWindow.GroupControl(searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar").ButtonControl(
+                searchDepth=1, AutomationId="CHomeDlg.m_pWgtTitleBar.m_pBtnClose").Click()
+            sleep(3)
+            hexMeetHJTWindow.WindowControl(searchDepth=1, AutomationId="CHomeDlg.AlertDlg").ButtonControl(searchDepth=3,
+                                                                                                          Name="确定").Click()
+            sleep(3)
+        # if hexMeetHJTWindow.Exists():
+        except:
             cmd = 'taskkill /F /IM HexMeetHJT.exe'
             os.system(cmd)
 
