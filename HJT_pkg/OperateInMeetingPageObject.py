@@ -6,6 +6,7 @@ class OperateInMeeting:
 
     def __init__(self):
         self.hjtMeetingWindow = auto.WindowControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg")
+        self.meetingWindowControl = self.hjtMeetingWindow.GroupControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.m_pWgtTitleBar")
         self.meetingLabel = self.hjtMeetingWindow.GroupControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.m_pWgtTitleBar").TextControl(searchDepth=1, ClassName="QLabel")
         self.meetingControlToolBar = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutBackgroundDlg") \
             .WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutCoverDlg").WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutToolbarDlg")
@@ -146,11 +147,34 @@ class OperateInMeeting:
         self.meetingControlToolBar.ButtonControl(searchDepth=3,
                                             AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.CLayoutFloatingCellsDlg.m_pWgtTopTitleBar.pBtMin").Click()
 
-    def maximise_local_vidoe(self):
+    def maximise_local_video(self):
         """恢复本地视频"""
         time.sleep(10)
         self.meetingLabel.Click()
         self.meetingControlToolBar.ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.widget.m_pBtnShowPic").Click()
+
+    def maximise_window(self):
+        """最大化窗口"""
+        time.sleep(10)
+        self.meetingWindowControl.ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.m_pWgtTitleBar.m_pRightWidget.m_pBtnMax").Click()
+
+    def restore_window_from_maximise(self):
+        """恢复先前视窗"""
+        time.sleep(10)
+        self.meetingWindowControl.ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.m_pWgtTitleBar.m_pRightWidget.m_pBtnRestore").Click()
+
+    def video_fullscreen(self):
+        """视频全屏"""
+        time.sleep(10)
+        self.meetingWindowControl.ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.m_pWgtTitleBar.m_pRightWidget.m_pBtnFullScreen").Click()
+
+    def video_restore_from_fullscreen(self):
+        """恢复先前视频窗口"""
+        time.sleep(10)
+        x, y = auto.GetCursorPos()
+        auto.Click(x + 800, y - 300)
+        self.hjtMeetingWindow.WindowControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg")\
+            .ButtonControl(searchDepth=4, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pWgtTitleBar.m_pRightWidget.m_pBtnFullScreen_Exit").Click()
 
     def hangup_call(self):
         """挂断"""

@@ -5,11 +5,22 @@ import allure
 
 class CaptureScreen:
 
-    def capture_screen(self, pic_name):
-        im = ImageGrab.grab(bbox=(645, 316, 1918, 1072))
+    @staticmethod
+    def capture_screen(pic_name, _bbox=(645, 316, 1918, 1072)):
+        im = ImageGrab.grab(bbox=_bbox)
         im.save(pic_name, "jpeg")
 
-    def attach_pic(self, pic_name, description):
+    @staticmethod
+    def attach_pic(pic_name, description):
+        with open(pic_name, mode='rb') as f:
+            file = f.read()
+            allure.attach(file, description, allure.attachment_type.PNG)
+
+    @staticmethod
+    def capture_attach_pic(pic_name, description, _bbox=(645, 316, 1918, 1072)):
+        im = ImageGrab.grab(bbox=_bbox)
+        im.save(pic_name, "jpeg")
+        sleep(1)
         with open(pic_name, mode='rb') as f:
             file = f.read()
             allure.attach(file, description, allure.attachment_type.PNG)
@@ -17,5 +28,6 @@ class CaptureScreen:
 
 if __name__ == '__main__':
     sleep(3)
-    capture_app = CaptureScreen()
-    capture_app.capture_screen("test.png")
+    bbox = (0, 0, 2560, 1440)
+    CaptureScreen().capture_screen("../pics/test.png")
+    CaptureScreen().capture_screen("test1.png", bbox)
