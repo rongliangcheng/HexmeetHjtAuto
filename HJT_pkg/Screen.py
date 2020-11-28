@@ -19,7 +19,7 @@ class CaptureScreen:
     @staticmethod
     def capture_attach_pic(pic_name, description, _bbox=(645, 316, 1918, 1072)):
         im = ImageGrab.grab(bbox=_bbox)
-        im.save(pic_name, "jpeg")
+        im.save(pic_name, "png")
         sleep(1)
         with open(pic_name, mode='rb') as f:
             file = f.read()

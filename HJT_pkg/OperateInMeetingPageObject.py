@@ -139,8 +139,8 @@ class OperateInMeeting:
         time.sleep(10)
         self.meetingLabel.Click()
         self.meetingControlToolBar.CheckBoxControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnVolume").Click()
-        auto.PressKey(auto.Keys.VK_UP)
-        auto.PressKey(auto.Keys.VK_DOWN)
+        auto.PressKey(5*auto.Keys.VK_UP)
+        auto.PressKey(5*auto.Keys.VK_DOWN)
 
     def minimise_local_video(self):
         """本地视频最小化"""
@@ -172,9 +172,10 @@ class OperateInMeeting:
         """恢复先前视频窗口"""
         time.sleep(10)
         x, y = auto.GetCursorPos()
-        auto.Click(x + 800, y - 300)
+        auto.Click(x - 800, y + 300)
         self.hjtMeetingWindow.WindowControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg")\
             .ButtonControl(searchDepth=4, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pWgtTitleBar.m_pRightWidget.m_pBtnFullScreen_Exit").Click()
+        auto.Click(x-100, y+50)
 
     def hangup_call(self):
         """挂断"""

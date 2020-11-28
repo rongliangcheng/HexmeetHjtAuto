@@ -30,9 +30,9 @@ def capture_attach_pic(pic_name, description, _bbox=(645, 316, 1918, 1072)):
 @allure.story("从菜单栏呼叫")
 @allure.step("入会")
 def test_joinameetingfromtopmenu():
-    sleep(3)
+    sleep(5)
     join_meeting_po.join_a_meeting_from_top_menu()
-    capture_attach_pic("joinameetingfromtopmenu.png", "joinameetingfromtopmenu")
+    #capture_attach_pic("joinameetingfromtopmenu.png", "joinameetingfromtopmenu")
     assert join_meeting_po.is_in_meeting()
 
 
@@ -90,7 +90,7 @@ def test_share_content_sound_1080P():
 @allure.step("共享白板")
 def test_share_white_board():
     operate_in_meeting.share_whiteboard()
-    capture_attach_pic("share_whiteboard.png", "mute_umute_camera")
+    capture_attach_pic("share_whiteboard.png", "share_whiteboard")
     operate_in_meeting.close_media_statistics()
 
 
@@ -131,7 +131,13 @@ def test_audio_only():
 @allure.story("会中操作")
 @allure.step("音频升级音视频")
 def test_av_escalation():
-    operate_in_meeting.av_escalation()
+    try:
+        operate_in_meeting.av_escalation()
+    except TimeoutError as e:
+        print(e)
+        operate_in_meeting.close_media_statistics()
+        operate_in_meeting.av_escalation()
+
     capture_attach_pic("av_escalation.png", "av_escalation")
 
 
@@ -169,7 +175,7 @@ def test_maximise_local_video():
 @allure.feature("测试HJT APP的会议中控制操作")
 @allure.story("会中操作")
 @allure.step("最大化窗口")
-def test_maximise_local_video():
+def test_maximise_windows():
     operate_in_meeting.maximise_window()
     capture_attach_pic("maximise_local_video.png", "maximise_local_video", fullscreenbox)
 
@@ -179,7 +185,7 @@ def test_maximise_local_video():
 @allure.feature("测试HJT APP的会议中控制操作")
 @allure.story("会中操作")
 @allure.step("恢复窗口")
-def test_maximise_local_video():
+def test_restore_window_from_max():
     operate_in_meeting.restore_window_from_maximise()
     capture_attach_pic("restore_window_from_maximise.png", "restore_window_from_maximise")
 
@@ -189,7 +195,7 @@ def test_maximise_local_video():
 @allure.feature("测试HJT APP的会议中控制操作")
 @allure.story("会中操作")
 @allure.step("全屏视频")
-def test_maximise_local_video():
+def test_video_fullscreen():
     operate_in_meeting.video_fullscreen()
     capture_attach_pic("video_fullscreen.png", "video_fullscreen", fullscreenbox)
 
@@ -199,7 +205,7 @@ def test_maximise_local_video():
 @allure.feature("测试HJT APP的会议中控制操作")
 @allure.story("会中操作")
 @allure.step("从全屏恢复视频")
-def test_maximise_local_video():
+def test_restore_from_fullscreen():
     operate_in_meeting.video_restore_from_fullscreen()
     capture_attach_pic("video_restore_from_fullscreen.png", "video_restore_from_fullscreen")
 
