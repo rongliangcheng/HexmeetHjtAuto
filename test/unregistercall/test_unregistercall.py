@@ -118,6 +118,24 @@ def test_unregister_call_id_password_one_line():
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("非注册呼入会议")
 @allure.feature("测试HJT APP的未注册用户的入会操作")
+@allure.story("匿名并同时输入会议号和密码")
+def test_unregister_call_id_password_one_line_mute_audio_video():
+    pic_name = "anonymous_confid_password1.png"
+    sleep(1)
+    unregister_call.append_password("*" + password)
+    sleep(1)
+    unregister_call.change_microphone_setting()
+    unregister_call.change_camera_setting()
+    unregister_call.user_join_commit()
+    sleep(15)
+    capture_screen.capture_screen(pic_name)
+    capture_screen.attach_pic(pic_name, "anonymous call with password mute audio and video")
+    sleep(15)
+    operate_meeting.hangup_call()
+
+@pytest.mark.flaky(rerun=1, rerun_delay=2)
+@allure.parent_suite("非注册呼入会议")
+@allure.feature("测试HJT APP的未注册用户的入会操作")
 @allure.story("清除会议")
 def test_terminate_reserve_call():
     unregister_call.login_from_unregister_call_page()
