@@ -32,7 +32,7 @@ def capture_attach_pic(pic_name, description, _bbox=(645, 316, 1918, 1072)):
 def test_joinameetingfromtopmenu():
     sleep(5)
     join_meeting_po.join_a_meeting_from_top_menu()
-    #capture_attach_pic("joinameetingfromtopmenu.png", "joinameetingfromtopmenu")
+    # capture_attach_pic("joinameetingfromtopmenu.png", "joinameetingfromtopmenu")
     assert join_meeting_po.is_in_meeting()
 
 
@@ -218,6 +218,17 @@ def test_restore_from_fullscreen():
 def test_hangup():
     operate_in_meeting.hangup_call()
     # assert not join_meeting_po.isInMeeting()
+
+
+@pytest.mark.flaky(rerun=1, rerun_delay=2)
+@allure.parent_suite("会议控制")
+@allure.feature("测试HJT APP的会议中控制操作")
+@allure.story("从桌面呼叫入会")
+@allure.step("从桌面呼叫入会并且静音，关摄像头")
+def test_join_meeting_from_panel():
+    join_meeting_po.join_a_meeting_from_panel("true")
+    capture_attach_pic("join_a_meeting_from_panel_mute.png", "join_a_meeting_from_panel_mute")
+    assert join_meeting_po.is_in_meeting()
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
