@@ -5,6 +5,8 @@ from HJT_pkg.HjtWindowsSingleton import HjtWindowSingleton
 from HJT_pkg.joinAMeetingPageObject import JoinAMeeting
 from HJT_pkg.OperateInMeetingPageObject import OperateInMeeting
 from HJT_pkg.Screen import CaptureScreen
+from PIL import Image
+from PIL import ImageChops
 
 hjt_singleton = HjtWindowSingleton()
 join_meeting_po = JoinAMeeting()
@@ -224,36 +226,27 @@ def test_hangup():
 @allure.parent_suite("会议控制")
 @allure.feature("测试HJT APP的会议中控制操作")
 @allure.story("从桌面呼叫入会")
-@allure.step("从桌面呼叫入会并且静音，关摄像头")
-def test_join_meeting_from_panel():
+@allure.step("从桌面静音，关摄像头呼叫入会并且挂断")
+def test_join_meeting_from_panel_mute():
     join_meeting_po.join_a_meeting_from_panel("true")
-    capture_attach_pic("join_a_meeting_from_panel_mute.png", "join_a_meeting_from_panel_mute")
-    assert join_meeting_po.is_in_meeting()
+    sleep(10)
+    capture_attach_pic("join_a_meeting_from_panel_mute.png", "join_a_meeting_from_panel_mute", (645, 357, 1915, 1068))
+    operate_in_meeting.hangup_call()
+    assert ImageChops.difference(Image.open("../pics/join_a_meeting_from_panel_mute.png"), Image.open("../Pictures/join_a_meeting_from_panel_mute.png")).getbbox() is None
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("会议控制")
 @allure.feature("测试HJT APP的会议中控制操作")
 @allure.story("从桌面呼叫入会")
-@allure.step("从桌面呼叫入会")
+@allure.step("从桌面呼叫入会并挂断")
 def test_join_meeting_from_panel():
     join_meeting_po.join_a_meeting_from_panel()
     capture_attach_pic("join_a_meeting_from_panel.png", "join_a_meeting_from_panel")
     assert join_meeting_po.is_in_meeting()
-
-
-@pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.parent_suite("会议控制")
-@allure.feature("测试HJT APP的会议中控制操作")
-@allure.story("从桌面呼叫入会")
-@allure.step("挂断会议")
-def test_hangup_2():
+    sleep(10)
     operate_in_meeting.hangup_call()
     # assert not join_meeting_po.isInMeeting()
-
-
-# def test_close_hjt():
-#     hjt_singleton.close_hjt()
 
 
 if __name__ == '__main__':
