@@ -10,3 +10,4 @@
 2020-11-02 14:13:07.297 HjtWindowsSingleton.py[29] close_hjt -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
 2020-11-02 14:13:28.062 ContactPageObject.py[20] call_from_organization -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.verticalWidget_4.m_pLvMenus', ControlType: ListControl}
 2020-11-02 14:13:41.731 HjtWindowsSingleton.py[29] close_hjt -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-12-09 18:26:13.835 HjtWindowsSingleton.py[41] close_hjt -> Find Control Timeout: {Name: '确定', ControlType: ButtonControl}

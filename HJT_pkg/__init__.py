@@ -9,3 +9,4 @@ from HJT_pkg.UnRegisterCallPageObject import UnRegisterCall
 from HJT_pkg.Screen import CaptureScreen
 from HJT_pkg.AppVersion import AppVersion
 from HJT_pkg.BuildVersion import BuildVersion
+from HJT_pkg.Common import CommonClass

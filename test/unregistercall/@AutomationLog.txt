@@ -45,3 +45,10 @@
 2020-11-23 13:25:16.304 UnRegisterCallPageObject.py[38] append_password -> Find Control Timeout: {Name: '加入会议', ControlType: TextControl}
 2020-11-23 13:25:26.853 UnRegisterCallPageObject.py[73] login_from_unregister_call_page -> Find Control Timeout: {Name: '返回', ControlType: ButtonControl}
 2020-11-23 13:25:42.629 HjtWindowsSingleton.py[38] close_hjt -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtTitleBar.m_pBtnClose', ControlType: ButtonControl}
+2020-12-07 10:39:42.778 UnRegisterCallPageObject.py[73] login_from_unregister_call_page -> Find Control Timeout: {Name: '返回', ControlType: ButtonControl}
+2020-12-07 10:40:30.722 OperateInMeetingPageObject.py[183] hangup_call -> Can not move cursor. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-12-07 10:40:40.776 OperateInMeetingPageObject.py[184] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-12-07 10:40:51.222 UnRegisterCallPageObject.py[13] go_to_unregister_call_page -> Find Control Timeout: {AutomationId: 'CHomeDlg.m_pWgtOperationBar.m_pWgtLoginUserInfo.horizontalWidget.m_pLblAvatar', ControlType: ImageControl}
+2020-12-07 10:41:36.377 OperateInMeetingPageObject.py[183] hangup_call -> Can not move cursor. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
+2020-12-07 10:41:46.426 OperateInMeetingPageObject.py[184] hangup_call -> Find Control Timeout: {AutomationId: 'CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup', ControlType: ButtonControl}
+2020-12-07 10:42:31.632 OperateInMeetingPageObject.py[183] hangup_call -> Can not move cursor. TextControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ClassName: 'QLabel', ControlType: TextControl}
