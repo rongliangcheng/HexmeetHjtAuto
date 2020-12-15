@@ -1,13 +1,12 @@
-import subprocess
-
 import pytest
+import sys
+import os
+sys.path.append((os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))))
 from HJT_pkg.AppVersion import AppVersion
 from HJT_pkg.BuildVersion import BuildVersion
 from HJT_pkg.HjtWindowsSingleton import HjtWindowSingleton
 from HJT_pkg.Common import CommonClass
 import re
-import allure
-from time import sleep
 
 projectName = "swep-evsdk-win-svc-qt-1.4.1"
 hjt_singleton = HjtWindowSingleton()
