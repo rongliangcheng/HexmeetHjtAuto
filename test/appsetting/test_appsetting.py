@@ -1,7 +1,9 @@
-import pytest
-import allure
-import sys
 import os
+import sys
+
+import allure
+import pytest
+
 sys.path.append((os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))))
 from HJT_pkg.AppSettingPageObject import AppSetting
 from HJT_pkg.ReserveMeetingPageObject import ReserveMeeting
@@ -11,7 +13,6 @@ from HJT_pkg.HjtWindowsSingleton import HjtWindowSingleton
 from time import sleep
 import os
 import shutil
-import sys
 
 login_user = "hjtautotest5"
 remote_user = "RongliangVE210"
