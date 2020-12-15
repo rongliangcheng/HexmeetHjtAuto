@@ -16,7 +16,7 @@ hjt_singleton = HjtWindowSingleton()
 def setup_module():
     hjt_singleton.start_hjt()
 
-#
+
 # def teardown_module():
 #     hjt_singleton.close_hjt()
 
@@ -39,10 +39,11 @@ def test_install_build():
 
         CommonClass().createEnvironmentFile("../allure-results/Environment.xml", matchObj.group())
 
-    #     subprocess.Popen("C:\\Program Files (x86)\\HexMeetHJT\\HexMeetHJT.exe")
-    #     sleep(10)
-    #     current_version = appVersion.getAppVersion()
-    #
+        # sleep(60)
+        # subprocess.Popen("C:\\Program Files (x86)\\HexMeetHJT\\HexMeetHJT.exe")
+        # sleep(60)
+        # current_version = appVersion.getAppVersion()
+
     # assert current_version.__contains__(str(build_version))
 
 
