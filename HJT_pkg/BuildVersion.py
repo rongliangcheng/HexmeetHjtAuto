@@ -54,7 +54,6 @@ class BuildVersion:
             install_command = "cmd.exe /c  HexmeetHJT.exe /s /v/qn"
             del_command = "cmd.exe /c del HexmeetHJT.exe "
             os.system(install_command)
-            time.sleep(60)
             os.system(del_command)
             self.log.debug("finished")
         else:

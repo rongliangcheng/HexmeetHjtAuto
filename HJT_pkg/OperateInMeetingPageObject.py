@@ -11,6 +11,12 @@ class OperateInMeeting:
         self.meetingControlToolBar = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutBackgroundDlg") \
             .WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutCoverDlg").WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutToolbarDlg")
 
+    def click_meetingLabel(self):
+        x, y=auto.GetCursorPos()
+        self.meetingLabel.Click()
+        auto.SetCursorPos(x, y)
+
+
     def show_media_statistics(self):
         self.hjtMeetingWindow.GroupControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.m_pWgtTitleBar")\
             .ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.m_pWgtTitleBar.m_pLeftWidget.m_pBtnNetworkQuality").Click()
@@ -25,13 +31,13 @@ class OperateInMeeting:
     def umte_umute_audio(self):
         """解除静音"""
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.CheckBoxControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnEnableMic").Click()
 
     def mute_umute_camera(self):
         """停止视频"""
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.CheckBoxControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnEnableCamera").Click()
 
     def share_content(self):
@@ -41,7 +47,7 @@ class OperateInMeeting:
         contentInSharingWindow = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CbackgroundWidget")
 
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.ButtonControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnShare").Click()
         shareContentWindow.CheckBoxControl(searchDepth=2, Name="共享电脑声音").Click()
         shareContentWindow.CheckBoxControl(searchDepth=2, Name="流畅度优先").Click()
@@ -60,7 +66,7 @@ class OperateInMeeting:
         contentInSharingWindow = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CbackgroundWidget")
 
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.ButtonControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnShare").Click()
         time.sleep(2)
         shareContentWindow.ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CSelectShareContent.toolbar.pBtShare").Click()
@@ -75,7 +81,7 @@ class OperateInMeeting:
             .WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutCoverDlg") \
             .WindowControl(searchDepth=1, ClassName="ev_app::views::CSelectShareContent")
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.ButtonControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnShare").Click()
         time.sleep(2)
         shareContentWindow.TextControl(searchDepth=7, Name="白板").Click()
@@ -92,13 +98,13 @@ class OperateInMeeting:
     def switch_video_layout(self):
         """分屏切换"""
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.CheckBoxControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnSwitchLayout").Click()
 
     def __change_name_window(self, rename_window):
         """ 调出更名窗口 """
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.ButtonControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnMore").Click()
         time.sleep(1)
         self.meetingControlToolBar.ButtonControl(searchDepth=2, Name="改名").Click()
@@ -123,7 +129,7 @@ class OperateInMeeting:
     def audio_only(self):
         """切换到语音模式"""
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.ButtonControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnMore").Click()
         time.sleep(1)
         self.meetingControlToolBar.ButtonControl(searchDepth=2, Name="切到语音模式").Click()
@@ -137,7 +143,7 @@ class OperateInMeeting:
     def change_volume(self):
         """调节音量"""
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.CheckBoxControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnVolume").Click()
         auto.PressKey(5*auto.Keys.VK_UP)
         auto.PressKey(5*auto.Keys.VK_DOWN)
@@ -150,7 +156,7 @@ class OperateInMeeting:
     def maximise_local_video(self):
         """恢复本地视频"""
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.widget.m_pBtnShowPic").Click()
 
     def maximise_window(self):
@@ -180,7 +186,7 @@ class OperateInMeeting:
     def hangup_call(self):
         """挂断"""
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.ButtonControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup").Click()
         time.sleep(2)
         auto.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.AlertDlg.m_bottomWidget.m_button1").Click()
@@ -188,7 +194,7 @@ class OperateInMeeting:
     def terminate_call(self):
         """结束会议"""
         time.sleep(10)
-        self.meetingLabel.Click()
+        self.click_meetingLabel()
         self.meetingControlToolBar.ButtonControl(searchDepth=1, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CLayoutToolbarDlg.m_pBtnHangup").Click()
         time.sleep(2)
         auto.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=2, Name="结束会议").Click()
