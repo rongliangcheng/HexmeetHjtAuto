@@ -10,7 +10,8 @@ contact = Contact()
 
 
 def setup_module():
-    hjt_singleton.start_hjt()
+    sleep(10)
+    # hjt_singleton.start_hjt()
 
 
 def teardown_module():

@@ -106,16 +106,16 @@ def test_prepare_all():
     operate_meeting.hangup_call()
 
 
-@allure.feature("测试HJT APP的设置界面")
-@allure.parent_suite("应用设置")
-@allure.story("改变带宽并入会")
-@pytest.mark.parametrize('bandwidth', bandwidth_list)
-def test_change_bandwidth(bandwidth):
-    # for bandwidth in bandwidth_list:
-    app_setting.chang_bandwidth(bandwidth)
-    sleep(2)
-    __join_and_quit_meeting()
-    sleep(8)
+# @allure.feature("测试HJT APP的设置界面")
+# @allure.parent_suite("应用设置")
+# @allure.story("改变带宽并入会")
+# @pytest.mark.parametrize('bandwidth', bandwidth_list)
+# def test_change_bandwidth(bandwidth):
+#     # for bandwidth in bandwidth_list:
+#     app_setting.chang_bandwidth(bandwidth)
+#     sleep(2)
+#     __join_and_quit_meeting()
+#     sleep(8)
 
 
 @pytest.mark.flaky(rerun=1, reruns_delay=2)
