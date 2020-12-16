@@ -41,6 +41,9 @@ class HjtWindowSingleton:
             hexMeetHJTWindow.WindowControl(searchDepth=1, AutomationId="CHomeDlg.AlertDlg").ButtonControl(searchDepth=3,
                                                                                                           Name="确定").Click()
             sleep(3)
+
+            cmd = 'taskkill /F /IM HexMeetHJT.exe'
+            os.system(cmd)
         # if hexMeetHJTWindow.Exists():
         except:
             cmd = 'taskkill /F /IM HexMeetHJT.exe'
