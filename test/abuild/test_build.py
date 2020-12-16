@@ -40,7 +40,7 @@ def test_install_build():
         sleep(60)
         matchObj = re.search(r'1\.4\.1\.([0-9]+)', build_file_url, re.I)
 
-        CommonClass().createEnvironmentFile("../allure-results/Environment.xml", matchObj.group())
+        CommonClass().createEnvironmentFile("allure-results/Environment.xml", matchObj.group())
 
         sleep(60)
         hjt_singleton.start_hjt()
