@@ -52,6 +52,7 @@ class HjtWindowSingleton:
     @staticmethod
     def start_hjt():
         """重启应用"""
+        sleep(5)
         if not auto.WindowControl(searchDepth=1, ClassName='ev_app::views::CHomeDlg').Exists():
             subprocess.Popen("C:\\Program Files (x86)\\HexMeetHJT\\HexMeetHJT.exe")
 
