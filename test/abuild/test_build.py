@@ -43,6 +43,7 @@ def test_install_build():
         CommonClass().createEnvironmentFile("allure-results/Environment.xml", matchObj.group())
         hjt_singleton.start_hjt()
         sleep(30)
+        # 需要以创建新的appversion对象来获取新的app
         current_version = AppVersion().getAppVersion()
 
     assert current_version.__contains__(str(build_version))
