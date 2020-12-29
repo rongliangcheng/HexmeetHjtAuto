@@ -112,10 +112,10 @@ def test_use_random_number_as_meeting_room():
 @allure.parent_suite("预约会议")
 @allure.feature("测试HJT APP的设置预约会议操作")
 @allure.story("预约会议")
-@allure.step("允许匿名入会")
-def test_allow_anonymous():
+@allure.step("允许公司成员")
+def test_allow_only_company_user():
     sleep(2)
-    reserve_meeting.allow_anonymous_user()
+    reserve_meeting.allow_only_company_user()
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)

@@ -60,7 +60,19 @@ class ReserveMeeting:
         self.reserve_meeting_page.CheckBoxControl(searchDepth=12, Name="使用随机号码作为会议号码").Click()
 
     def allow_anonymous_user(self):
-        self.reserve_meeting_page.CheckBoxControl(searchDepth=11, Name="允许匿名入会").Click()
+        self.reserve_meeting_page.EditControl(searchDepth=11, Name="请选择").Click()
+        sleep(1)
+        self.reserve_meeting_page.TextControl(searchDepth=10, Name="允许匿名").Click()
+
+    def allow_only_company_user(self):
+        self.reserve_meeting_page.EditControl(searchDepth=11, Name="请选择").Click()
+        sleep(1)
+        self.reserve_meeting_page.TextControl(searchDepth=10, Name="只允许公司成员").Click()
+
+    def allow_only_invited_user(self):
+        self.reserve_meeting_page.EditControl(searchDepth=11, Name="请选择").Click()
+        sleep(1)
+        self.reserve_meeting_page.TextControl(searchDepth=10, Name="只允许邀请者").Click()
 
     def mute_when_join_meeting(self):
         self.reserve_meeting_page.CheckBoxControl(searchDepth=11, Name="加入会议时静音").Click()
