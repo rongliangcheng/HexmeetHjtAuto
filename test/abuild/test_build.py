@@ -1,4 +1,5 @@
-import subprocess
+# coding=utf-8
+# import subprocess
 from time import sleep
 
 import allure
@@ -24,9 +25,9 @@ def setup_module():
 #     hjt_singleton.close_hjt()
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.parent_suite("¸üĞÂbuild")
-@allure.feature("¸üĞÂbuild")
-@allure.story("Éı¼¶")
+@allure.parent_suite("æ£€æŸ¥ç‰ˆæœ¬")
+@allure.feature("æ›´æ–°build")
+@allure.story("å‡çº§")
 def test_install_build():
     appVersion = AppVersion()
     buildVersion = BuildVersion()
@@ -47,7 +48,7 @@ def test_install_build():
         CommonClass().createEnvironmentFile("allure-results/Environment.xml", matchObj.group())
         hjt_singleton.start_hjt()
         sleep(30)
-        # ĞèÒªÒÔ´´½¨ĞÂµÄappversion¶ÔÏóÀ´»ñÈ¡ĞÂµÄapp
+        # éœ€è¦ä»¥åˆ›å»ºæ–°çš„appversionå¯¹è±¡æ¥è·å–æ–°çš„app
         current_version = AppVersion().getAppVersion()
 
     assert current_version.__contains__(str(build_version))
