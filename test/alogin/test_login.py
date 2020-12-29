@@ -71,7 +71,7 @@ def test_login_with_5_times_wrong_password():
 @allure.feature("测试HJT APP的登录界面的操作")
 @allure.story("正常登录成功")
 def test_login_with_normal():
-    # sleep(300)
+    sleep(300)
     __user_login("cloudbeta.hexmeet.com", "hjtautotest5", "123456")
 
 

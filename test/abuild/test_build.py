@@ -21,8 +21,8 @@ def setup_module():
     hjt_singleton.start_hjt()
 
 
-# def teardown_module():
-#     hjt_singleton.close_hjt()
+def teardown_module():
+    hjt_singleton.close_hjt()
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("检查版本")

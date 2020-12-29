@@ -190,9 +190,5 @@ def test_change_to_full_mode_meeting():
     app_setting.change_to_full_mode_meeting()
 
 
-# def test_close_hjt():
-#     hjt_singleton.close_hjt()
-
-
 if __name__ == '__main__':
     pytest.main(["-s", "test_appsetting.py", "--alluredir=reports"])
