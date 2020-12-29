@@ -1,6 +1,7 @@
 import subprocess
 from time import sleep
 
+import allure
 import pytest
 import sys
 import os
@@ -22,7 +23,10 @@ def setup_module():
 # def teardown_module():
 #     hjt_singleton.close_hjt()
 
-
+@pytest.mark.flaky(rerun=1, rerun_delay=2)
+@allure.parent_suite("更新build")
+@allure.feature("更新build")
+@allure.story("升级")
 def test_install_build():
     appVersion = AppVersion()
     buildVersion = BuildVersion()
