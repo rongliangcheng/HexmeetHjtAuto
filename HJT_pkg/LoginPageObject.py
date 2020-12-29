@@ -34,3 +34,4 @@ class UserLogin:
 
     def login_fail_commit(self):
         self.login_windows.WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg").ButtonControl(searchDepth=3, Name="确定").Click()
+
