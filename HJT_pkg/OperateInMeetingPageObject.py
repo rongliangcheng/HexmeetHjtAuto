@@ -138,7 +138,7 @@ class OperateInMeeting:
         """切换到视频模式"""
         avEscalationWindow = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutBackgroundDlg") \
             .WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutCoverDlg")
-        avEscalationWindow.ButtonControl(searchDepth=2, Name="退出语音模式").Click()
+        avEscalationWindow.ButtonControl(searchDepth=2, Name="切到视频模式").Click()
 
     def change_volume(self):
         """调节音量"""
