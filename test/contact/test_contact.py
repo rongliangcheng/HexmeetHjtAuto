@@ -21,6 +21,7 @@ def teardown_module():
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("通讯录")
 @allure.feature("测试HJT APP的通讯录操作")
+@allure.suite("呼叫常用联系人")
 @allure.story("呼叫常用联系人")
 def test_call_from_favorite():
     sleep(5)
@@ -29,6 +30,7 @@ def test_call_from_favorite():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("通讯录")
+@allure.suite("从组织架构中查找联系人")
 @allure.feature("测试HJT APP的通讯录操作")
 @allure.story("从组织架构中查找联系人")
 def test_call_from_organization():

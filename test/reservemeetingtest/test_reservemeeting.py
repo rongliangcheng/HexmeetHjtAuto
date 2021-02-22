@@ -26,8 +26,9 @@ def teardown_module():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("点击入会")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("点击入会")
 @allure.step("点击入会")
 def test_click_reserve_meeting():
     sleep(3)
@@ -38,9 +39,10 @@ def test_click_reserve_meeting():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("选择日期")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
-@allure.step("点击入会")
+@allure.story("选择日期")
+@allure.step("选择日期")
 def test_choose_date():
     sleep(2)
     reserve_meeting.choose_date()
@@ -48,10 +50,10 @@ def test_choose_date():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("选择时间")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
-@allure.step("点击入会")
 @allure.story("选择时间")
+@allure.step("选择时间")
 def test_choose_time():
     sleep(2)
     reserve_meeting.choose_time()
@@ -59,8 +61,9 @@ def test_choose_time():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("选择时长")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("选择时长")
 @allure.step("选择时长")
 def test_choose_duration():
     sleep(2)
@@ -69,8 +72,9 @@ def test_choose_duration():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("输入密码")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("输入密码")
 @allure.step("输入密码")
 def test_fill_password():
     sleep(2)
@@ -79,8 +83,9 @@ def test_fill_password():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("加入备注")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("加入备注")
 @allure.step("加入备注")
 def test_fill_meeting_note():
     sleep(2)
@@ -89,8 +94,9 @@ def test_fill_meeting_note():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("选择与会者")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("选择与会者")
 @allure.step("选择与会者")
 def test_choose_participant():
     sleep(2)
@@ -99,8 +105,9 @@ def test_choose_participant():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("随机会议号")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("随机会议号")
 @allure.step("随机会议号")
 def test_use_random_number_as_meeting_room():
     auto.WheelDown(6)
@@ -110,9 +117,10 @@ def test_use_random_number_as_meeting_room():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("只允许公司成员")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
-@allure.step("允许公司成员")
+@allure.story("只允许公司成员")
+@allure.step("只允许公司成员")
 def test_allow_only_company_user():
     sleep(2)
     reserve_meeting.allow_only_company_user()
@@ -120,8 +128,9 @@ def test_allow_only_company_user():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("入会自动静音")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("入会自动静音")
 @allure.step("入会自动静音")
 def test_mute_when_join_meeting():
     sleep(2)
@@ -130,8 +139,9 @@ def test_mute_when_join_meeting():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("创建会议")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("创建会议")
 @allure.step("创建会议")
 def test_create_reserve_meeting():
     auto.WheelDown()
@@ -141,8 +151,9 @@ def test_create_reserve_meeting():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("对已经预约会议进行修改")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("对已经预约会议进行修改")
 @allure.step("对已经预约会议进行修改")
 def test_edit_and_return_from_reserve_meeting():
     reserve_meeting.edit_reserve_meeting()
@@ -152,8 +163,9 @@ def test_edit_and_return_from_reserve_meeting():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("分享会议信息")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("分享会议信息")
 @allure.step("分享会议信息")
 def test_share_and_return_from_reserve_meeting():
     reserve_meeting.share_reserve_meeting()
@@ -163,8 +175,9 @@ def test_share_and_return_from_reserve_meeting():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("删除预约会议")
 @allure.feature("测试HJT APP的设置预约会议操作")
-@allure.story("预约会议")
+@allure.story("删除预约会议")
 @allure.step("删除预约会议")
 def test_delete_reserve_meeting():
     reserve_meeting.delete_reserve_meeting()
@@ -172,6 +185,7 @@ def test_delete_reserve_meeting():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("创建即时会议并入会")
 @allure.feature("测试HJT APP的设置预约会议操作")
 @allure.story("创建即时会议并入会")
 def test_create_now_and_join():
@@ -194,6 +208,7 @@ def test_create_now_and_join():
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
 @allure.parent_suite("预约会议")
+@allure.suite("创建带密码的即时会议然后加入")
 @allure.feature("测试HJT APP的设置预约会议操作")
 @allure.story("创建带密码的即时会议然后加入")
 def test_create_now_password_and_join():

@@ -25,8 +25,9 @@ def teardown_module():
     hjt_singleton.close_hjt()
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
-@allure.parent_suite("检查版本")
-@allure.feature("更新build")
+@allure.parent_suite("检查版本并更新版本")
+@allure.suite("更新版本")
+@allure.feature("更新版本")
 @allure.story("升级")
 def test_install_build():
     appVersion = AppVersion()
