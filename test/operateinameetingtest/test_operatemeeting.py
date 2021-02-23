@@ -23,6 +23,7 @@ def teardown_module():
 
 
 def capture_attach_pic(pic_name, description, _bbox=(645, 316, 1918, 1072)):
+    sleep(5)
     CaptureScreen.capture_attach_pic("../pics/" + pic_name, description, _bbox)
 
 
@@ -77,6 +78,7 @@ def test_share_content():
     operate_in_meeting.show_media_statistics()
     operate_in_meeting.share_content()
     capture_attach_pic("share_content.png", "share_content", fullscreenbox)
+    operate_in_meeting.stop_content()
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
@@ -88,6 +90,7 @@ def test_share_content():
 def test_share_content_sound_1080P():
     operate_in_meeting.share_content_sound_highframerate()
     capture_attach_pic("share_content_sound_highframerate.png", "share_content_sound_highframerate", fullscreenbox)
+    operate_in_meeting.stop_content()
 
 
 @pytest.mark.flaky(rerun=1, rerun_delay=2)
@@ -99,6 +102,7 @@ def test_share_content_sound_1080P():
 def test_share_white_board():
     operate_in_meeting.share_whiteboard()
     capture_attach_pic("share_whiteboard.png", "share_whiteboard")
+    operate_in_meeting.stop_whiteboard()
     operate_in_meeting.close_media_statistics()
 
 

@@ -44,7 +44,6 @@ class OperateInMeeting:
         """分享屏幕 共享声音 流畅度优先"""
         shareContentWindow = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutBackgroundDlg").WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutCoverDlg") \
             .WindowControl(searchDepth=1, ClassName="ev_app::views::CSelectShareContent")
-        contentInSharingWindow = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CbackgroundWidget")
 
         time.sleep(10)
         self.click_meetingLabel()
@@ -54,16 +53,13 @@ class OperateInMeeting:
         time.sleep(2)
         shareContentWindow.ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CSelectShareContent.toolbar.pBtShare").Click()
         time.sleep(30)
-        contentInSharingWindow.TextControl(searchDepth=7, Name="停止分享").Click()
-        time.sleep(2)
-        contentInSharingWindow.ButtonControl(searchDepth=4, Name="是").Click()
+
 
     def share_content_sound_highframerate(self):
         """分享屏幕 不共享声音 1080P"""
         shareContentWindow = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutBackgroundDlg") \
             .WindowControl(searchDepth=1, ClassName="ev_app::views::CLayoutCoverDlg") \
             .WindowControl(searchDepth=1, ClassName="ev_app::views::CSelectShareContent")
-        contentInSharingWindow = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CbackgroundWidget")
 
         time.sleep(10)
         self.click_meetingLabel()
@@ -71,6 +67,9 @@ class OperateInMeeting:
         time.sleep(2)
         shareContentWindow.ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CSelectShareContent.toolbar.pBtShare").Click()
         time.sleep(30)
+
+    def stop_content(self):
+        contentInSharingWindow = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::CbackgroundWidget")
         contentInSharingWindow.TextControl(searchDepth=7, Name="停止分享").Click()
         time.sleep(2)
         contentInSharingWindow.ButtonControl(searchDepth=4, Name="是").Click()
@@ -88,6 +87,8 @@ class OperateInMeeting:
         time.sleep(2)
         shareContentWindow.ButtonControl(searchDepth=2, AutomationId="CLayoutBackgroundDlg.CLayoutPeopleSettingDlg.CLayoutCoverDlg.CSelectShareContent.toolbar.pBtShare").Click()
         time.sleep(30)
+
+    def stop_whiteboard(self):
         white_board_window = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::WhiteBoardDlg")
         white_board_window.GroupControl(searchDepth=1, ClassName="ev_app::views::WhiteBoardTopWidget").TextControl(searchDepth=4, Name="停止分享").Click()
         exit_white_board_button = auto.WindowControl(searchDepth=1, ClassName="ev_app::views::WhiteBoardDlg").WindowControl(searchDepth=1, ClassName="ev_app::views::AlertDlg")\
