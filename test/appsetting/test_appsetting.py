@@ -79,7 +79,9 @@ def __join_and_share_whiteboard_then_exit():
     reserve_meeting.join_now_meeting()
     sleep(5)
     operate_meeting.share_whiteboard()
-    sleep(3)
+    sleep(20)
+    operate_meeting.stop_whiteboard()
+    sleep(5)
     operate_meeting.terminate_call()
 
 
